@@ -1,0 +1,10 @@
+/Users/ryanmcpherson/workspace/csharp/exercises/lightningExs/bin/Debug/netcoreapp2.0/lightningExs.deps.json
+/Users/ryanmcpherson/workspace/csharp/exercises/lightningExs/bin/Debug/netcoreapp2.0/lightningExs.runtimeconfig.json
+/Users/ryanmcpherson/workspace/csharp/exercises/lightningExs/bin/Debug/netcoreapp2.0/lightningExs.runtimeconfig.dev.json
+/Users/ryanmcpherson/workspace/csharp/exercises/lightningExs/bin/Debug/netcoreapp2.0/lightningExs.dll
+/Users/ryanmcpherson/workspace/csharp/exercises/lightningExs/bin/Debug/netcoreapp2.0/lightningExs.pdb
+/Users/ryanmcpherson/workspace/csharp/exercises/lightningExs/obj/Debug/netcoreapp2.0/lightningExs.csproj.CoreCompileInputs.cache
+/Users/ryanmcpherson/workspace/csharp/exercises/lightningExs/obj/Debug/netcoreapp2.0/lightningExs.AssemblyInfoInputs.cache
+/Users/ryanmcpherson/workspace/csharp/exercises/lightningExs/obj/Debug/netcoreapp2.0/lightningExs.AssemblyInfo.cs
+/Users/ryanmcpherson/workspace/csharp/exercises/lightningExs/obj/Debug/netcoreapp2.0/lightningExs.dll
+/Users/ryanmcpherson/workspace/csharp/exercises/lightningExs/obj/Debug/netcoreapp2.0/lightningExs.pdb
