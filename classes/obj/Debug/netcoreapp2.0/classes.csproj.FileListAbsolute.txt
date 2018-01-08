@@ -1,0 +1,10 @@
+/Users/ryanmcpherson/workspace/csharp/exercises/classes/bin/Debug/netcoreapp2.0/classes.deps.json
+/Users/ryanmcpherson/workspace/csharp/exercises/classes/bin/Debug/netcoreapp2.0/classes.runtimeconfig.json
+/Users/ryanmcpherson/workspace/csharp/exercises/classes/bin/Debug/netcoreapp2.0/classes.runtimeconfig.dev.json
+/Users/ryanmcpherson/workspace/csharp/exercises/classes/bin/Debug/netcoreapp2.0/classes.dll
+/Users/ryanmcpherson/workspace/csharp/exercises/classes/bin/Debug/netcoreapp2.0/classes.pdb
+/Users/ryanmcpherson/workspace/csharp/exercises/classes/obj/Debug/netcoreapp2.0/classes.csproj.CoreCompileInputs.cache
+/Users/ryanmcpherson/workspace/csharp/exercises/classes/obj/Debug/netcoreapp2.0/classes.AssemblyInfoInputs.cache
+/Users/ryanmcpherson/workspace/csharp/exercises/classes/obj/Debug/netcoreapp2.0/classes.AssemblyInfo.cs
+/Users/ryanmcpherson/workspace/csharp/exercises/classes/obj/Debug/netcoreapp2.0/classes.dll
+/Users/ryanmcpherson/workspace/csharp/exercises/classes/obj/Debug/netcoreapp2.0/classes.pdb

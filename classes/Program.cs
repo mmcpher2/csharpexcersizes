@@ -18,16 +18,17 @@ namespace classes {
                 public DateTime CreatedOn { get; }
                 // Create a property for    holding a list of current employees
                 public List<Employee> currentEmployees { get; set; }
-                // // Create a method that allows external code to add an employee
-                // public void addEmployee (string Name, string Title, DateTime CreatedOn)
-                //     {
-                //         currentEmployees.Add();
-                //     }
-                // // Create a method that allows external code to remove an employee
-                // public void removeEmployee (string Name, string Title, DateTime CreatedOn)
-                //     {
-                //         currentEmployees.Remove();
-                //     }
+                // Create a method that allows external code to add an employee
+
+                public void addEmployee (Employee employee)
+                    {
+                        currentEmployees.Add(employee);
+                    }
+                // Create a method that allows external code to remove an employee
+                public void removeEmployee (Employee employee)
+                    {
+                        currentEmployees.Remove(employee);
+                    }
                     /*
                         Create a constructor method that accepts two arguments:
                             1. The name of the company
@@ -36,8 +37,9 @@ namespace classes {
                         The constructor will set the value of the public properties
                     */
                 public Company (String Name, DateTime CreateOn) {
-                    Name = "Ryans Company";
-                    CreatedOn = new DateTime();
+                    this.Name = Name;
+                    this.CreatedOn = new DateTime();
+                    this.currentEmployees = new List<Employee>();
                     }
             }
 
@@ -49,20 +51,29 @@ namespace classes {
             Ryan.CreatedOn = new DateTime();
 
             Employee Dave = new Employee();
-            Ryan.Name = "Dave";
-            Ryan.Title = "Vice President";
-            Ryan.CreatedOn = new DateTime();
+            Dave.Name = "Dave";
+            Dave.Title = "Vice President";
+            Dave.CreatedOn = new DateTime();
 
             Employee Todd = new Employee();
-            Ryan.Name = "Todd";
-            Ryan.Title = "Janitor";
-            Ryan.CreatedOn = new DateTime();
+            Todd.Name = "Todd";
+            Todd.Title = "Janitor";
+            Todd.CreatedOn = new DateTime();
 
             // Add employee to a List of employees
             List<Employee> currentEmployees = new List<Employee>();
             currentEmployees.Add(Ryan);
             currentEmployees.Add(Dave);
             currentEmployees.Add(Todd);
+
+            Company Apple = new Company("Apple", DateTime.Now);
+            Apple.addEmployee(Ryan);
+            Apple.addEmployee(Dave);
+            Apple.addEmployee(Todd);
+
+            foreach(Employee name in currentEmployees) {
+                Console.WriteLine($"{name.Name}: '{name.Title}' = Started On: {name.CreatedOn}");
+            }
         }
     }
 }
