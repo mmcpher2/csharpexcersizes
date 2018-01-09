@@ -1,0 +1,7 @@
+bin
+obj
+.suo
+packages
+.DS_Store
+project.lock.json
+.vscode
