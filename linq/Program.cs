@@ -82,6 +82,22 @@ namespace linq
 
             double maxPrice = prices.Max();
             Console.WriteLine("The max price is: ${0}", maxPrice);
+
+            /*
+                Store each number in the following List until a perfect square
+                is detected.
+
+                Ref: https://msdn.microsoft.com/en-us/library/system.math.sqrt(v=vs.110).aspx
+            */
+            List<double> wheresSquaredo = new List<double>()
+            {
+                66, 12, 8, 27, 82, 34, 7, 50, 19, 46, 81, 23, 30, 4, 68, 14
+            };
+            foreach(double number in wheresSquaredo){
+            Console.WriteLine(Math.Sqrt(number));
+            }
+
+            
         }
     }
 }
