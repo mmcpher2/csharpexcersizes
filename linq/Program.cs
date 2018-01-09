@@ -56,7 +56,32 @@ namespace linq
                 Console.WriteLine(item);
             }
 
-            
+            // Output how many numbers are in this list
+            List<int> numbers2 = new List<int>()
+            {
+                15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            };
+
+            int totalNumbers = numbers2.Count();
+            Console.WriteLine("Total numbers in Numbers2: {0}", totalNumbers);
+
+            // How much money have we made?
+            List<double> purchases = new List<double>()
+            {
+                2340.29, 745.31, 21.76, 34.03, 4786.45, 879.45, 9442.85, 2454.63, 45.65
+            };
+
+            double totalMoneys = purchases.Sum();
+            Console.WriteLine("We have made a total of ${0}", totalMoneys);
+
+            // What is our most expensive product?
+            List<double> prices = new List<double>()
+            {
+                879.45, 9442.85, 2454.63, 45.65, 2340.29, 34.03, 4786.45, 745.31, 21.76
+            };
+
+            double maxPrice = prices.Max();
+            Console.WriteLine("The max price is: ${0}", maxPrice);
         }
     }
 }
