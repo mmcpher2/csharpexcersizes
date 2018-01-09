@@ -39,6 +39,24 @@ namespace linq
             foreach (string word in descend) {
                 Console.WriteLine(word);
             }
+
+            // Build a collection of these numbers sorted in ascending order
+            List<int> numbers = new List<int>()
+            {
+                15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            };
+
+            var ascend =
+            from number in numbers
+            orderby number
+            select number;
+
+            foreach (int item in ascend)
+            {
+                Console.WriteLine(item);
+            }
+
+            
         }
     }
 }
