@@ -111,8 +111,26 @@ namespace linq
                 new Customer(){ Name="Sid Brown", Balance=49582.68, Bank="CITI"}
             };
 
+            // Create some banks and store in a List
+            List<Bank> banks = new List<Bank>() {
+                new Bank(){ Name="First Tennessee", Symbol="FTB"},
+                new Bank(){ Name="Wells Fargo", Symbol="WF"},
+                new Bank(){ Name="Bank of America", Symbol="BOA"},
+                new Bank(){ Name="Citibank", Symbol="CITI"},
+            };
+
             // list of millionaires
             List<Customer> millionaires = customers.Where(c => c.Balance >= 1000000).ToList();
+
+            var millionaireReport =
+                from customer in millionaires
+                join bank in banks on customer.Bank equals bank.Symbol
+                select new{
+                    firstName = customer.Name.Split(" ")[0],
+                    lastName = customer.Name.Split(" ")[1],
+                    totalAccount = customer.Balance,
+                    bankName = bank.Name
+                };
 
             var groupsOfMillionaires =
                 from customer in millionaires
@@ -122,9 +140,16 @@ namespace linq
                     NumberOfMils = milGroup.Count()
                 };
 
+            var orderedReport = millionaireReport.OrderBy(customer => customer.lastName).ToList();
+
+            foreach (var customer in orderedReport)
+                {
+                    Console.WriteLine($"{customer.firstName} {customer.lastName} at {customer.bankName}");
+                }
+
             foreach (var bank in groupsOfMillionaires){
                 Console.WriteLine($"{bank.Bank}: {bank.NumberOfMils}");
-            }
+                }
         }
         public class Customer
         {
@@ -139,14 +164,6 @@ namespace linq
             public string Symbol { get; set; }
             public string Name { get; set; }
         }
-
-        // Create some banks and store in a List
-        List<Bank> banks = new List<Bank>() {
-            new Bank(){ Name="First Tennessee", Symbol="FTB"},
-            new Bank(){ Name="Wells Fargo", Symbol="WF"},
-            new Bank(){ Name="Bank of America", Symbol="BOA"},
-            new Bank(){ Name="Citibank", Symbol="CITI"},
-        };
     }
 }
 
