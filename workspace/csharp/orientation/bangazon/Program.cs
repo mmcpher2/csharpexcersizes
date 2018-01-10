@@ -9,7 +9,8 @@ namespace bangazon
         public string _name;
         public string _supervisor;
         public int _employee_count;
-        
+        public string _location;
+
         // Constructor method
         public Department(string name, string supervisor, int employees)
         {

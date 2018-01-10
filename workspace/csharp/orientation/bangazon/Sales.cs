@@ -11,7 +11,7 @@ public class Sales: Department
         public Sales(string dept_name, string supervisor, int employees): base(dept_name, supervisor, employees)
         {
         }
-
+        
         public void AddPolicy(string title, string text)
         {
             SalesRules.Add(title, text);
