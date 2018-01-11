@@ -8,7 +8,7 @@ public class Operations: Department
     {
         private Dictionary<string, string> OperationsRules = new Dictionary<string, string>();
 
-        public Operations(string name, string supervisor, int employees, double baseBudget, double setBudget): base(name, supervisor, employees, baseBudget, setBudget)
+        public Operations(string name, string supervisor, int employees): base(name, supervisor, employees)
         {
         }
 

@@ -8,7 +8,7 @@ public class HumanResources: Department
     {
         private Dictionary<string, string> _policies = new Dictionary<string, string>();
 
-        public HumanResources(string name, string supervisor, int employees, double baseBudget, double setBudget): base(name, supervisor, employees, baseBudget, setBudget)
+        public HumanResources(string name, string supervisor, int employees): base(name, supervisor, employees)
         {
         }
 
@@ -28,5 +28,7 @@ public class HumanResources: Department
         {
             return $"{_name} {_supervisor} {_employee_count}";
         }
+
+
     }
 }

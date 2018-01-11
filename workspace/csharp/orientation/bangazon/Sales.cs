@@ -8,7 +8,7 @@ public class Sales: Department
     {
         private Dictionary<string, string> SalesRules = new Dictionary<string, string>();
 
-        public Sales(string name, string supervisor, int employees, double baseBudget, double setBudget): base(name, supervisor, employees, baseBudget, setBudget)
+        public Sales(string name, string supervisor, int employees): base(name, supervisor, employees)
         {
         }
 
@@ -28,5 +28,7 @@ public class Sales: Department
         {
             return $"{_name} {_supervisor} {_employee_count}";
         }
+
+        public override void setBudget(double budget) => this.Budget += budget + 100000.00;
     }
 }

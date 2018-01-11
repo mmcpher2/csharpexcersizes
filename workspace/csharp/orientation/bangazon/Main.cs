@@ -16,6 +16,7 @@ namespace bangazon
 
             Sales sales = new Sales("Sales", "Ryan McPherson", 195);
             sales.AddPolicy("Sell no matter what.", "Do anything you have to do.");
+            sales.setBudget(100000);
 
             Operations operations = new Operations("Operations", "Don Young", 2345);
             operations.AddPolicy("Build things that dont break.", "It's your job.");
@@ -24,7 +25,7 @@ namespace bangazon
             departments.Add(hr);
             departments.Add(sales);
             departments.Add(operations);
-            
+
             // Iterate over all items in the list and output a string
             // representation of the class
             foreach(Department d in departments)
