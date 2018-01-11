@@ -8,10 +8,10 @@ public class Sales: Department
     {
         private Dictionary<string, string> SalesRules = new Dictionary<string, string>();
 
-        public Sales(string dept_name, string supervisor, int employees): base(dept_name, supervisor, employees)
+        public Sales(string name, string supervisor, int employees, double baseBudget, double setBudget): base(name, supervisor, employees, baseBudget, setBudget)
         {
         }
-        
+
         public void AddPolicy(string title, string text)
         {
             SalesRules.Add(title, text);

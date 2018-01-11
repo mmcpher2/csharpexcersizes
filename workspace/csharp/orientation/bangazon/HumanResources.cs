@@ -8,7 +8,7 @@ public class HumanResources: Department
     {
         private Dictionary<string, string> _policies = new Dictionary<string, string>();
 
-        public HumanResources(string dept_name, string supervisor, int employees): base(dept_name, supervisor, employees)
+        public HumanResources(string name, string supervisor, int employees, double baseBudget, double setBudget): base(name, supervisor, employees, baseBudget, setBudget)
         {
         }
 
