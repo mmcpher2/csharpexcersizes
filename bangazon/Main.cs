@@ -9,7 +9,6 @@ namespace bangazon
         public static void Main() {
             List<Department> departments = new List<Department>();
 
-
             // Create some instances
             HumanResources hr = new HumanResources("HR", "Amy Schumer", 2);
             hr.AddPolicy("Don't burp!", "Please don't do that in the office");
