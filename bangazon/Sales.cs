@@ -28,6 +28,10 @@ public class Sales: Department
         {
             return $"{_name} {_supervisor} {_employee_count}";
         }
-        public override void setBudget(double budget) => this.Budget += budget + 100000.00;
+        public override void setBudget(double budget)
+        {
+            this.Budget += budget + 100000.00;
+            Console.WriteLine($"Sales Budget: ${Budget}");
+        }
     }
 }

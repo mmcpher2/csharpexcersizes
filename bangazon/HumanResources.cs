@@ -29,6 +29,10 @@ public class HumanResources: Department
             return $"{_name} {_supervisor} {_employee_count}";
         }
 
-
+        public override void setBudget(double budget)
+        {
+            this.Budget += budget + 1000.00;
+            Console.WriteLine($"HR Budget: ${Budget}");
+        }
     }
 }

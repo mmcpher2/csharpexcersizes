@@ -27,5 +27,11 @@ public class Operations: Department
         {
             return $"{_name} {_supervisor} {_employee_count}";
         }
+
+        public override void setBudget(double budget)
+        {
+            this.Budget += budget - 10000.00;
+            Console.WriteLine($"Operations Budget: ${Budget}");
+        }
     }
 }

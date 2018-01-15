@@ -13,6 +13,7 @@ namespace bangazon
             // Create some instances
             HumanResources hr = new HumanResources("HR", "Amy Schumer", 2);
             hr.AddPolicy("Don't burp!", "Please don't do that in the office");
+            hr.setBudget(2000);
 
             Sales sales = new Sales("Sales", "Ryan McPherson", 195);
             sales.AddPolicy("Sell no matter what.", "Do anything you have to do.");
@@ -20,6 +21,7 @@ namespace bangazon
 
             Operations operations = new Operations("Operations", "Don Young", 2345);
             operations.AddPolicy("Build things that dont break.", "It's your job.");
+            operations.setBudget(30);
 
             // Add derived departments to the list
             departments.Add(hr);
