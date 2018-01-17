@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/ryanmcpherson/Downloads/musichistory (1).db" foreign_keys="1"/><window><current_tab id="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2765"/><expanded_item id="0" parent="1"/><expanded_item id="0" parent="0"/><expanded_item id="2" parent="0"/><expanded_item id="3" parent="0"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="Genre"/><default_encoding codec=""/><browsetable_info data="AAAABAAAAAgAUwBvAG4AZwAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////AAAAAP////8AAAAKAEcAZQBuAHIAZQAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////AAAAAP////8AAAAMAEEAcgB0AGkAcwB0AAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////8AAAAA/////wAAAAoAQQBsAGIAdQBtAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////8AAAAA/////w=="/></tab_browse><tab_sql><sql name="SQL 1">SELECT * FROM Genre;
+
+DELETE FROM Artist (ArtistId, ArtistName, YearEstablished)
+VALUES (null, 'The Red Hot Chili Peppers', '1983');
+
+INSERT INTO Album (AlbumId, Title, ReleaseDate, AlbumLength, Label, ArtistId, GenreId)
+VALUES (null, 'Blood Sugar Sex Magik', '9/24/1991', '4615', 'Warner Bros', '28', '2');
+
+INSERT INTO Song (SongID, TItle, SongLength, ReleaseDate, GenreId, ArtistId, AlbumId)
+VALUES (null, 'Suck My Kis', '217', '9/24/1991', '2', '28', '23');
+
+SELECT s.Title, a.Title, n.ArtistName FROM Song s LEFT JOIN Album a 
+ON s.AlbumId = a.AlbumId
+LEFT JOIN Artist n
+ON s.ArtistId = n.ArtistId
+WHERE n.ArtistName = 'The Red Hot Chili Peppers';
+
+SELECT a.Title, count(*)
+FROM Song s
+LEFT JOIN Album a 
+ON a.AlbumId = s.AlbumId
+GROUP BY s.AlbumId;
+
+SELECT n.ArtistName, count(*)
+FROM Song s
+LEFT JOIN Artist n
+ON n.ArtistId = s.ArtistId
+GROUP BY s.ArtistId;
+
+SELECT  g.Label, count(*)
+FROM Song s
+LEFT JOIN Genre g
+ON s.GenreId = g.GenreId
+GROUP BY g.GenreId;
+
+SELECT Title, MAX(AlbumLength)
+FROM Album;
+
+SELECT s.Title, a.Title, MAX(s.SongLength)
+FROM Song s
+LEFT JOIN Album a
+ON s.AlbumId = a.AlbumId;
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
