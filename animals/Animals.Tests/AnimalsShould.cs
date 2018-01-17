@@ -35,5 +35,12 @@ namespace Animals.Tests
             Assert.Equal(_animal.WalkingSpeed, "fast");
             Assert.Equal(_dog.WalkingSpeed, "slow");
         }
+
+        [Fact]
+        public void instanceCheck()
+        {
+            Assert.Equal(_animal.GetType(), typeof(Animals.Animal));
+            Assert.Equal(_dog.GetType(), typeof(Animals.Dog));
+        }
     }
 }
