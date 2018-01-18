@@ -37,9 +37,20 @@ namespace BankTeller
 
                     // Menu option 2: Deposit money
                     case 2:
+                        // Ask user to input deposit amount
+                        double DepositAmount = int.Parse(Console.ReadLine());
+
                         // Logic here
+
                         break;
+
+                    // Menu option 3: Withdraw money
+                    case 3:
+
+                    // Menu option 4: Show account balance
+                    case 4:
                 }
+                // Menue option 5: EXIT
             } while (choice != 5);
         }
     }
